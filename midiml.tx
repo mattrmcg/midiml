@@ -1,0 +1,46 @@
+Program:
+    '<MIDIProgram>'
+        tracks*=Track
+    '</MIDIProgram>'
+;
+
+Track:
+    '<Track' (tempoArg=TempoArg)? '>'
+        notes*=Notes
+    '</Track>'
+;
+
+Notes:
+    '<Notes' (durationArg=DurationArg)? (noteIntervalArg=NoteIntervalArg)? (volArg=VolArg)? '>'
+    (chords+=Chord[','])?
+    (nums+=INT[','])?
+    '</Notes>'
+;
+
+Chord:
+    '[' chord+=INT[','] ']'
+;
+
+RepeatArg:
+    'repeat' ArgExp
+;
+
+TempoArg:
+    'tempo' ArgExp
+;
+
+DurationArg:
+    'duration' ArgExp
+;
+
+NoteIntervalArg:
+    'interval' ArgExp
+;
+
+VolArg:
+    'vol' ArgExp
+;
+
+ArgExp:
+    '=' strArg=STRING
+;
