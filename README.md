@@ -1,5 +1,5 @@
 # MIDIML
-#### MIDIML (MIDI Markup Language) is an xml-like DSL that provides an easier way to define MIDI files.
+#### [MIDIML](https://mattrmcg.github.io/midiml/) (MIDI Markup Language) is an xml-like DSL that provides an easier way to define MIDI files.
 
 ##### Define a `.midiml` file
 `program.midiml`
